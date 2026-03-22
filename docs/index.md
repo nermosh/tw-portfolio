@@ -4,7 +4,7 @@ icon: lucide/id-card
 
 # About Me
 
-![Anastasiia Motovilova - AI enhanced photo](/images/Gemini_Enhanced_Anastasiia-profile-photo.png){width="250" align=left }
+![Anastasiia Motovilova - photo](./images/banana-avatar2.jpg){width="250" align=left }
 
 I’ve spent over a decade in the IT world, but my foundation is actually in the "old school" of content: I have a Master’s in book publishing and text editing. That background gave me a deep respect for information architecture, copyright, and the life cycle of a project—whether it’s a printed textbook or a digital knowledge base.
 

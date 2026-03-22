@@ -36,15 +36,9 @@ nav = [
     { "About Me" = "index.md" },
     #{ "Knowledge Management" = "kb.md"},
     #{ "Document Types" = "how-to.md"},
-    #{ "Internal Documents" = "cheat-sheets.md"},
     #{ "API Documents" = "api.md" },
     #{ "Style Guide" = "style-guide.md" },
-    #{ "Localization" = [
-    #    "l10n/process.md",
-    #    "l10n/vendor.md",
-    #    "l10n/content.md"
-    #]},
-    #{ "Migration" = "migration.md"},
+    #{ "Localization" = "l10n.md"},
     #{ "Training" = "learning.md"}
 ]
 
