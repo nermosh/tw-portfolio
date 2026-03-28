@@ -34,7 +34,7 @@ Copyright &copy; 2026 Individual Entrepreneur Anastasiia Motovilova
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
     { "About Me" = "index.md" },
-    #{ "Knowledge Management" = "kb.md"},
+    { "Knowledge Management" = "kb.md"},
     #{ "Document Types" = "how-to.md"},
     #{ "API Documents" = "api.md" },
     #{ "Style Guide" = "style-guide.md" },
