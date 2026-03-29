@@ -37,7 +37,7 @@ nav = [
     { "Knowledge Management" = "kb.md"},
     #{ "Document Types" = "how-to.md"},
     #{ "API Documents" = "api.md" },
-    #{ "Style Guide" = "style-guide.md" },
+    { "Style Guide" = "style-guide.md" },
     #{ "Localization" = "l10n.md"},
     #{ "Training" = "learning.md"}
 ]

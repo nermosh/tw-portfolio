@@ -168,7 +168,7 @@ As the knowledge base grew — through acquisitions, white-label expansion, and 
 
 :lucide-target: **Goal:** Create a shared style guide for the knowledge base that would support consistent formatting, work well with machine translation, bring acquired-company content into alignment, and help the AI search tool work more reliably. The longer-term goal was to use the style guide as the foundation for a semi-automated article rewriting tool.
 
-:lucide-triangle-alert: **Constraints:** Like most knowledge bases that grow organically over time, ours didn't have a formal written style guide yet. Different writers made their own calls on formatting, sentence structure, and terminology — which is completely normal at that stage, but it created challenges as the team scaled and as new tools became more sensitive to those inconsistencies.
+:lucide-triangle-alert: **Constraints:** A style guide existed, but it was scoped narrowly: AP Stylebook conventions for headings and punctuation, screenshot formatting rules, color usage, and variable syntax. It hadn't been updated to account for the machine translation pipeline, the RAG search implementation, or the full range of article types that had accumulated over the years.
 
 The screenshot-dependency problem in particular was too widespread to fix manually one article at a time. It needed a documented standard and a scalable process to address it across the full library.
 
