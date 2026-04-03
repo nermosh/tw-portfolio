@@ -4,43 +4,51 @@ icon: lucide/id-card
 
 # About Me
 
-![Anastasiia Motovilova - photo](./images/banana-avatar2.jpg){width="250" align=left }
+![Anastasiia Motovilova - photo](./images/Anastasiia-Motovilova-profile-photo.png){width="250" align=left }
 
-I’ve spent over a decade in the IT world, but my foundation is actually in the "old school" of content: I have a Master’s in book publishing and text editing. That background gave me a deep respect for information architecture, copyright, and the life cycle of a project—whether it’s a printed textbook or a digital knowledge base.
+I call myself a **documentarian** — though the longer version is: a product technical writer who defines content strategy and helps organizations turn what they know into documentation that actually gets used. My work sits at the intersection of technical writing, knowledge management, and content strategy; I’m also well-versed in eLearning content, knowledge assessments, and repurposing documentation for training and certification paths.
 
-I’ve worked across support, instruction, and knowledge management, collaborating with everyone from DEV and QA to Sales, Marketing and HR. I don't just write; I find the right tone, style, and complexity for each audience.
+My foundation is a Master’s in book publishing and text editing — which shaped how I think about [information architecture and the full content lifecycle](#education--certifications). That same background is why I approach a knowledge base the way an editor approaches a manuscript: structure first, then words.
 
 ## What I do
 
-I’m a bit of a "bridge between SMEs and users." I know your developers and product owners are busy. My job is to join team meetings, schedule short 1-1s, listen actively, and turn "tribal knowledge" into structured, comprehensive documentation. I don't just "write manuals"—I help your busiest team members reclaim their time.
+Not every technical writer works the same way. Some are embedded in dev teams, living in Git repositories and documenting APIs — that’s a valid and important specialty. Mine is different.
 
-Beyond standard internal and customer-facing docs, I can help your team refine technical requirements, create release notes, and manage the complexities of white-labeling, rebranding, and global expansion.
+I work at the product and business layer: understanding how a system behaves, who uses it, and what each audience actually needs to know. What I thrive at — and want to keep doing — is building the content architecture that lets one well-structured source of truth serve multiple purposes: internal documentation, client-facing guides, eLearning courses, knowledge assessments, and onboarding materials. The format and depth change; the source of truth doesn’t.
+
+I use frameworks and AI tools to structure content so it’s reusable by design, and to scale production without scaling the effort proportionally.
 
 ## Where I’ve been lately
 
 ### Bringing order to a growing product
 
-Currently, I am a Technical Writer in a Product department. I joined soon after the company moved past the "startup" stage. My main challenge is that almost no product documentation existed when I arrived. I act as a "knowledge detective"—I talk to the team, find the missing information, building the glossary and relentlessly push everyone to use the same terms. As I document the system, I also look for ways to automate the maintanance process and semi-automate the creation of guides and tutorials to save time for everyone.
+Currently, I work as a contractor Technical Writer at **Betby**, a B2B sports betting platform. I joined when the company has moved past the "startup" stage and started scaling rapidly — at that point, fewer than 100 internal articles existed and many challenges arose as existing documents were not covering the questions many new hires had. I started the way I always do: audit what's there, talk to the people who actually know things, and figure out who needs what.
 
-### Managing Complexity and AI
+The glossary came first — it's the foundation for everything in internal documentation. At the same time, the Client Services department was launching a new Knowledge Base in Intercom, and I offered to help them set the right foundation before the first article went live. Having managed a [1,300+ article knowledge base](kb.md) at my previous company, I'd seen firsthand what happens when tone, structure, and terminology standards come too late. So I put together a style guide and AI prompts they could use to co-write and draft articles in a consistent, translation-ready format. They were happy to take it. Today I own the internal documentation in Confluence; the Client Services team owns the customer-facing KB, and I feed them verified facts and screenshots with each release.
 
-In my previous role as a Knowledge Manager, I looked after a customer-facing knowledge base with over 1,000 articles. This was a massive project that involved moving content between different platforms and merging information as our company grew and bought other businesses.
+### Managing Content to Scale Well
 
-I also worked directly on AI implementation, specifically setting up RAG search and automated translation. I’ve learned how to structure information so it’s easy for a human to read, but also "machine-readable" for an AI or LLM.
+In my previous role, I spent years managing a customer-facing knowledge base at enterprise scale — 1,300+ articles, multiple product lines, teams across several regions, and content that needed to work in multiple languages. The full story is in the [Knowledge Management](kb.md) section.
+
+What that experience gave me is hard to replicate any other way: I know which problems appear at scale, what approaches hold up under that pressure, and which ones don’t. Working with smaller and scaling companies now, I can apply those lessons early — before the complexity arrives.
 
 ## Navigating Languages and Cultures
 
-Through my years in Technical Support—moving from agent to instructor and eventually instructional designer—I’ve mastered the art of leading a conversation, listen actively, set expectations and ask the right questions. I sucessfully collaborated with people from North and Central America, CIS countries, Georgia, India, and Japan. I’ve learned that the key to a successful project is often how you navigate the interpersonal nuances. I speak Russian and English fluently, but more importantly, I speak the "languages" of Support, QA, Marketing, and Engineering and respect the cultural background of every colleague and partner.
+Cross-cultural collaboration isn’t just a line on my CV — it’s something I’ve navigated daily across most of my career. From providing technical support to customers in the US, UK, and Australia, to teaching the same course content to classrooms with very different group dynamics, to working under both Russian and American management styles — I’ve learned that the "how" of communication matters as much as the "what."
+
+I speak Russian and English fluently, but more importantly, I speak the "languages" of Support, QA, Marketing, and Engineering — and I know that those languages also carry cultural assumptions worth paying attention to.
 
 ## Learning New Industries Quickly
 
-I understand the new hire onboarding process inside and out: I’ve personally managed the training and onboarding for over 50 new hires. In my most recent role, I mastered a completely new industry and a new set of tools in just a few weeks. I don't wait to be "fully trained" to help—I was already delivering useful documents during my first month.
+I learn by doing — and in my experience, the fastest way to learn a new domain is to start documenting it. At Betby, I moved from knowing nothing about sports betting to publishing a glossary and the first how-to articles within the first month. The gaps in my own understanding showed up in the writing, and filling them was the job.
+
+That same approach carried me through earlier career transitions too. I’ve personally onboarded and trained over 50 new hires across different roles — so I understand both sides: what it takes to get up to speed quickly, and what good onboarding documentation actually needs to do.
 
 ## Professional Toolkit & Skills
 
 ### :lucide-file-text: Documentation & Content Strategy
 
-* **Methodology**: SME-Led Documentation, Product-Centric Documentation, Docs-as-Code, Information Architecture (Diataxis), Searchability Analysis, manual testing.
+* **Methodology**: SME-Led Documentation (SME = Subject Matter Expert), Product-Centric Documentation, Docs-as-Code (plain text files + version control, built into a website automatically), Information Architecture (Diataxis — a framework that sorts docs into tutorials, how-to guides, references, and explanations), Searchability Analysis, manual testing (using browser dev tools and API schemas to verify how a product behaves — minimizing questions to developers when source code access isn't available).
 * **Static Site Generators**: MkDocs, Zensical, Docsify, Git-based workflows.
 * **Authoring & Markup**: Markdown, HTML, Obsidian, VS Code, Microsoft Word.
 * **Platforms**: Confluence, Oracle CX Knowledge, Google Workspace.
@@ -51,7 +59,7 @@ I understand the new hire onboarding process inside and out: I’ve personally m
 * **Frameworks**: ADDIE, Bloom’s Taxonomy, Exam Design for global audiences.
 * **LMS Administration**: Docebo, Moodle.
 * **Learning Content Authoring**: Articulate 360 (Storyline, Rise), Navattic.
-* **Media Production**: Animation and Video (Vyond, Snagit, Camtasia), Audio (writing scripts, recordign and editing narration).
+* **Media Production**: Animation and Video (Vyond, Snagit, Camtasia), Audio (writing scripts, recording and editing narration).
 
 ### :lucide-cpu: Technical Knowledge
 
@@ -59,7 +67,7 @@ I understand the new hire onboarding process inside and out: I’ve personally m
 * **Cloud & Connectivity**: IaaS (Virtual Servers, Web Hosting), SaaS (Web, Desktop, and Mobile), VoIP Telephony, Unified Communications.
 * **Security & Access**: 2FA, Single Sign-On (SSO), Role Based Access to Control Panels, IP Whitelist/Block List management.
 * **APIs**: REST API, AsyncAPI, GraphQL
-* **AI**: RAG Search implementation, preparing content for Automated Translation, building custom GPTs/Gems, building AI agents and related automations.
+* **AI**: RAG Search implementation (RAG = Retrieval Augmented Generation, an AI method that searches your documentation before answering a question), preparing content for Automated Translation, building custom GPTs/Gems, building AI agents and related automations.
 
 ### :lucide-users: Collaboration & Management
 
@@ -85,7 +93,7 @@ I treat documentation as a complex product. My 7-year academic track provided a 
 
 **Research Focus:** Digital Transformation of Educational Content
 
-My thesis and practicum focused on converting traditional print textbooks into interactive digital ecosystems. I developed frameworks for integrating legacy media (audio/disc) with modern interactive elements, a methodology I now apply to scaling corporate knowledge bases and technical documentation.
+My thesis focused on converting traditional printed textbooks into digital learning materials — figuring out how to bring in audio, video, and interactive elements without losing what made the original content effective. The core challenge was migrating content across formats without breaking it. That same problem comes up constantly in technical writing, and having worked through it academically gave me a head start on every content migration project I've handled since.
 
 ---
 
@@ -94,7 +102,7 @@ My thesis and practicum focused on converting traditional print textbooks into i
 **Continuous Professional Education Diploma** | *2021*<br>
 *Moscow Institute of Psychoanalysis*
 
-Focus: Instructional design, psychological aspects of remote knowledge transfer, presentation methods for online learning, Bloom's Taxonomy, ADDIE model, curriculum development, building knowledge asessments.
+Focus: Instructional design, psychological aspects of remote knowledge transfer, presentation methods for online learning, Bloom's Taxonomy, ADDIE model, curriculum development, building knowledge assessments.
 
 ---
 
@@ -171,7 +179,7 @@ Focus: Instructional design, psychological aspects of remote knowledge transfer,
     ---
 
     **English as a Second Language**: C2 Proficient <br>
-    [:lucide-external-link: View Certificate](hhttps://cert.efset.org/wNouJW)
+    [:lucide-external-link: View Certificate](https://cert.efset.org/wNouJW)
 
 </div>
 
