@@ -12,10 +12,11 @@ obstacles: >-
 
 
   There were also cross-cultural differences in how the two teams communicated — in pace, in how feedback was given, and in how decisions got made. These are normal things to navigate in international collaboration, but they did affect how long it took to agree on process changes.
+section: Knowledge Management
 library_scale: 1,300 articles across 20 products multiplied by 2 localized versions
 title: Building the Localization Workflow
 engagement: intermedia-knowledge-manager-assistant
-year: 2023
+year: 2022–2023
 role: Knowledge Manager and cross-team lead — I represented our content team in
   joint sessions with the Japanese partner and drove workflow improvements on
   both sides.

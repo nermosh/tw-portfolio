@@ -87,11 +87,10 @@ collections:
         display_fields: ["{{company}} — {{role}} ({{period}})"]
         hint: "Which role/company does this story belong to?"
 
-      - label: Year
+      - label: Year(s)
         name: year
-        widget: number
-        value_type: int
-        hint: "The year this project happened"
+        widget: string
+        hint: "e.g. 2022 or 2020–2022"
 
       - label: Role at the Time
         name: role
@@ -130,3 +129,11 @@ collections:
         name: lessons
         widget: markdown
         hint: "What this experience gave you that you carry forward."
+
+      - label: Portfolio Section
+        name: section
+        widget: select
+        options:
+          - { label: "Knowledge Management", value: "Knowledge Management" }
+          - { label: "Style Guide", value: "Style Guide" }
+        hint: "Which section of the portfolio should this story appear under?"

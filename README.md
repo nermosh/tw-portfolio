@@ -62,9 +62,14 @@ zensical.toml           # Site configuration and navigation
 ```bash
 # Create and activate a virtual environment
 python -m venv venv
-source venv/Scripts/activate    # Windows (Git Bash)
-source venv/bin/activate        # macOS / Linux
+```
 
+Activate it:
+
+- **PowerShell:** `.\venv\Scripts\Activate.ps1`
+- **Git Bash / macOS / Linux:** `source venv/bin/activate`
+
+```bash
 # Install Python dependencies
 pip install zensical
 
@@ -74,26 +79,50 @@ npm install
 
 ### Editing content in the CMS
 
+**Git Bash / macOS / Linux:**
+
 ```bash
 bash scripts/start-cms.sh
 ```
 
-Opens the CMS at `http://localhost:8000/admin/`. Both the Decap Git proxy (port 8081) and the static file server (port 8000) run in the same terminal. Press `Ctrl+C` to stop both.
+**PowerShell** — run each command in a separate terminal:
+
+```powershell
+# Terminal 1
+npx decap-server
+
+# Terminal 2
+.\venv\Scripts\Activate.ps1
+python -m http.server 8000 --directory docs
+```
+
+Opens the CMS at `http://localhost:8000/admin/`. Press `Ctrl+C` to stop.
 
 ### Building and previewing the site
 
 After saving changes in the CMS:
 
+**Git Bash / macOS / Linux:**
+
 ```bash
 bash scripts/build.sh
+```
+
+**PowerShell:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+python scripts/render_stories.py
+zensical build
 ```
 
 This renders all stories from their CMS source files and builds the static site.
 
 To preview with live reload instead of a one-time build:
 
-```bash
-source venv/Scripts/activate
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\venv\Scripts\Activate.ps1
 zensical serve
 ```
 

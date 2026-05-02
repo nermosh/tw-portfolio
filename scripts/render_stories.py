@@ -13,6 +13,20 @@ from pathlib import Path
 STORIES_DIR = Path("docs/stories")
 ENGAGEMENTS_DIR = Path("docs/engagements")
 OUTPUT_DIR = Path("docs/stories-rendered")
+TOML_PATH = Path("zensical.toml")
+
+# Fixed nav shape: (section label, static page, story section key or None)
+NAV_STRUCTURE = [
+    ("About Me",             "index.md",       None),
+    ("Knowledge Management", "kb.md",          "Knowledge Management"),
+    ("Style Guide",          "style-guide.md", "Style Guide"),
+]
+NAV_COMMENTED = [
+    '#{ "Document Types" = "how-to.md"}',
+    '#{ "API Documents" = "api.md" }',
+    '#{ "Localization" = "l10n.md"}',
+    '#{ "Training" = "learning.md"}',
+]
 
 CONTEXT_FIELDS = [
     ("company",       ":lucide-building-2:",  "Company"),
@@ -106,6 +120,34 @@ def render_story(story_path: Path) -> str:
     return frontmatter + "\n\n".join(parts)
 
 
+def build_nav_block(story_sections: dict) -> str:
+    entries = []
+    for label, static_page, section_key in NAV_STRUCTURE:
+        stories = story_sections.get(section_key, []) if section_key else []
+        all_pages = ([static_page] if static_page else []) + [f"stories-rendered/{s}" for s in stories]
+        if not all_pages:
+            continue
+        if len(all_pages) == 1:
+            entries.append(f'    {{ "{label}" = "{all_pages[0]}" }}')
+        else:
+            inner = "\n".join(f'        "{p}",' for p in all_pages[:-1])
+            inner += f'\n        "{all_pages[-1]}"'
+            entries.append(f'    {{ "{label}" = [\n{inner}\n    ]}}')
+
+    body = ",\n".join(entries)
+    if NAV_COMMENTED:
+        body += ",\n" + "\n".join(f"    {c}" for c in NAV_COMMENTED)
+    return f"nav = [\n{body}\n]"
+
+
+def update_nav(story_sections: dict) -> None:
+    content = TOML_PATH.read_text(encoding="utf-8")
+    new_nav = build_nav_block(story_sections)
+    updated = re.sub(r"nav = \[[\s\S]*?\n\]", new_nav, content)
+    TOML_PATH.write_text(updated, encoding="utf-8")
+    print(f"  updated: {TOML_PATH} (nav)")
+
+
 def main():
     if OUTPUT_DIR.exists():
         shutil.rmtree(OUTPUT_DIR)
@@ -116,11 +158,26 @@ def main():
         print("No stories found.")
         return
 
+    story_sections: dict[str, list[tuple[int, str]]] = {}
+
     for story_path in stories:
+        meta, _ = parse_file(story_path)
         rendered = render_story(story_path)
         out_path = OUTPUT_DIR / story_path.name
         out_path.write_text(rendered, encoding="utf-8")
         print(f"  rendered: {out_path}")
+
+        section = meta.get("section")
+        if section:
+            year_raw = str(meta.get("year", "0"))[:4]
+            year = int(year_raw) if year_raw.isdigit() else 0
+            story_sections.setdefault(section, []).append((year, story_path.name))
+
+    sorted_sections = {
+        section: [name for _, name in sorted(entries, reverse=True)]
+        for section, entries in story_sections.items()
+    }
+    update_nav(sorted_sections)
 
     print(f"Done — {len(stories)} story/stories written to {OUTPUT_DIR}/")
 

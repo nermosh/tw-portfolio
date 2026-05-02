@@ -37,12 +37,16 @@ nav = [
     { "About Me" = "index.md" },
     { "Knowledge Management" = [
         "kb.md",
-        "stories-rendered/japan-partner-localization-workflow.md"
+        "stories-rendered/regular-reporting.md",
+        "stories-rendered/japan-partner-localization-workflow.md",
+        "stories-rendered/white-label-content-strategy.md",
+        "stories-rendered/regional-release-scheduling.md",
+        "stories-rendered/content-migration.md"
     ]},
-    #{ "Document Types" = "how-to.md"},
-    #{ "API Documents" = "api.md" },
     { "Style Guide" = "style-guide.md" },
-    #{ "Localization" = "l10n.md"},
+    #{ "Document Types" = "how-to.md"}
+    #{ "API Documents" = "api.md" }
+    #{ "Localization" = "l10n.md"}
     #{ "Training" = "learning.md"}
 ]
 

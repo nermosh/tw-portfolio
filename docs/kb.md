@@ -9,83 +9,6 @@ At its largest, the knowledge base held over 1,300 articles covering 20 products
 
 The work on this page covers content strategy, localization, platform migration, and AI tool adoption. These areas draw on editing, research, project coordination, and cross-cultural communication just as much as on technical writing — so if you come from one of those fields, you probably already have a stronger starting point here than you think.
 
-## :lucide-layers: White-label Content Strategy
-
-At its peak, the knowledge base covered about 20 products and over 1,300 articles. Part of that growth came from company acquisitions, which meant some articles had been written in different styles and formats before joining our library.
-
-:lucide-target: **Goal:** Keep one master content library that published correctly to five white-label brands at the same time — each with its own product set and release schedule — without content meant for one brand showing up on another.
-
-!!! note "What is a white-label arrangement?"
-    Partner companies resell a product under their own brand name. Each partner brand had a different product catalog and sometimes a different release timeline for new features.
-
-### :lucide-code: Variable Management
-
-:lucide-triangle-alert: **Constraints:** The KMS (Knowledge Management System — the platform used to write and publish articles) used **content variables** to customize what each brand's site showed. Variables are placeholder tokens — similar to a mail-merge field — that get replaced with brand-specific text when an article publishes. For example, `$fileSync` might show as one product name on one brand's site and a different name on another. Some variables hid entire content blocks from certain brands; others showed them only to specific brands. There were also variables for building links to external resources, and those cross-reference links had to be verified carefully too.
-
-If a variable token had a typo, the raw placeholder text would appear on the live site instead of the correct product name or feature description — with no warning, visible to real customers.
-
-The KMS preview mode couldn't render variables, because the substitution happened in a separate publishing pipeline after the draft left the system. This meant some errors only appeared after going live. The platform also didn't include **linting tools** (automated checkers that catch syntax errors before publishing) — it was built for part-time contributors on the support team, so professional-grade review tooling wasn't part of the setup.
-
-:lucide-user-check: **My role:** Knowledge Manager and Technical Writer — primary reviewer for brand correctness across all five publications.
-
-I built my product knowledge over years as a Support agent, which gave me a solid mental model of which features each brand had. Since the tooling didn't include a variable validation layer, manual review using checklists was the main safety check — shared across a team of four.
-
-I caught most errors by carefully reading through the draft text in the **WYSIWYG editor** (a visual editor that shows you a formatted preview as you type). For anything that only showed up after publishing to production, I fixed it as quickly as possible.
-
-!!! success "Highlight"
-    Every other week the knowledge base got 2 to 5 new features to cover, resulting in 4–12 articles to publish across regional schedules. After every publish cycle I manually checked each article on every brand's site against a checklist — catching live errors immediately, before customers hit them. Live errors reaching customers were rare: the checklist kept the most critical variables under close review, and any recurring mistake patterns fed directly back into contributor onboarding and training.
-
-### :lucide-calendar-clock: Regional Release Scheduling
-
-:lucide-triangle-alert: **Constraints:** Features didn't roll out to all regions at the same time. A typical release went to the US first, then Australia, then Europe — with Japan sometimes getting the same feature months later, occasionally with a different scope. The knowledge base needed region-specific article versions that went live on different dates, with content that could legitimately differ between regions for a while. Missing a regional publish date meant users in that country would see outdated or missing instructions right after a feature launched for them. The release dates could change often, so we were not able to use the scheduling feature of the KMS.
-
-:lucide-user-check: **My role:** Knowledge Base Release coordinator — I tracked rollout schedules across all brands and regions and was responsible for making sure every regional article version went live on the correct date.
-
-For feature releases, I matched each article update to the regional rollout schedule and published accordingly. For content updates that weren't tied to a release — just improvements to existing self-support content — I checked the weekly activity report to confirm that writers had updated all regional versions, not just the primary one. It's easy to miss the regional articles in those cases, and this check was the main safeguard against gaps reaching users in specific countries.
-
-!!! success "Highlight"
-    Managing five brands across four geographies with staggered release schedules — without a single automated scheduling or validation tool — required keeping a live mental model of the product matrix updated at all times. The absence of tooling made the process entirely dependent on process discipline and product knowledge built over years. Over three years in this role (two as contributor, one as Knowledge Manager), there were zero missed regional publish dates.
-
-## :lucide-globe: Japan Partner Localization Workflow
-
-The Japanese market was handled through a local partner brand. As part of their agreement, the partner was responsible for providing Japanese-language versions of all knowledge base content. This was a separate pipeline from how we handled other regions, where everything ran through the same KMS.
-
-:lucide-target: **Goal:** Keep the Japanese-language knowledge base accurate and up to date, even though the two teams were working in completely separate systems with no automated connection between them.
-
-:lucide-triangle-alert: **Constraints:** We used Oracle CX Knowledge for our KMS, while the Japanese partner worked in their own **TMS** (Translation Management System — software that manages the process of sending content for translation and receiving it back). The two systems had no **API integration** (an automated connection that lets software exchange data without anyone doing it manually), so every update had to be transferred by hand.
-
-With a fully manual process, keeping the two versions in sync was an ongoing challenge. Content would sometimes **drift out of sync** — meaning the English source had been updated, but the Japanese version hadn't caught up yet. Coordinating on changes took real time from both teams.
-
-There were also cross-cultural differences in how the two teams communicated — in pace, in how feedback was given, and in how decisions got made. These are normal things to navigate in international collaboration, but they did affect how long it took to agree on process changes.
-
-:lucide-user-check: **My role:** Knowledge Manager and cross-team lead — I represented our content team in joint sessions with the Japanese partner and drove workflow improvements on both sides.
-
-I ran regular meetings with the Japanese partner team to check on the current workflow, spot any content that had drifted out of sync, and suggest improvements.
-
-Working across cultures meant adjusting how I communicated. I framed feedback as observations rather than corrections, gave the partner team time to review and reach their own consensus before expecting an answer, and wrote everything as precisely as possible to reduce translation ambiguity — because the written text is much easier to translate and process than live speech in a foreign language. These habits have stayed with me and shaped how I approach cross-team communication generally.
-
-!!! success "Highlight"
-    When I inherited the workflow, weekly sync meetings regularly ran over one hour — with long pauses while the partner team discussed internally and processed action items. By gradually moving parts of the discussion to async email exchange and making the agenda more structured, the meetings got shorter over time and eventually became unnecessary. Over approximately ten months, the workflow reached a point where it ran smoothly without regular check-ins.
-
-## :lucide-arrow-right-left: Content Migration
-
-A knowledge base that grows over many years naturally picks up content that becomes outdated, and formatting that shifts as platforms and standards evolve. When the company moved from a self-hosted open-source platform (with a Coveo search module) to Oracle CX Knowledge — an enterprise cloud solution — it was a good moment to also clean up the library.
-
-:lucide-target: **Goal:** Move the full knowledge base to Oracle CX Knowledge, use the migration as a chance to improve content quality and remove outdated material, and make sure everything worked correctly on the new platform.
-
-:lucide-triangle-alert: **Constraints:** A knowledge base of this size and age naturally has some drift — articles that were accurate when written but haven't been updated since, or content from acquired companies that was formatted differently. Articles that came in through acquisitions sometimes had HTML structure issues that caused display problems.
-
-Given the volume of articles and the ongoing work on content from acquired companies, the migration moved forward with the full library — including some articles for deprecated features. After the migration, some articles that had displayed fine in the old system showed rendering issues in the new one — a normal part of any platform switch, but it required a dedicated clean-up pass.
-
-:lucide-user-check: **My role:** Knowledge Manager's assistant — I handled the content review after migration, archived legacy articles, and fixed HTML formatting where needed. This migration happened while I was still in the assistant role, before I took on full Knowledge Manager responsibilities.
-
-Before the migration, I went through the list of articles flagged automatically based on labels and update dates. I evaluated each one against a checklist: whether the feature was still supported and whether there were any duplicate or overlapping articles on the same topic.
-
-After the migration, I reviewed the most popular articles for display issues and fixed them by editing the **HTML source code** (the markup language behind web pages) directly, to bring the formatting in line with Oracle CX standards.
-
-!!! success "Highlight"
-    Out of 130 articles flagged for review, I archived around 50 — cleaning up nearly 40% of the reviewed content before it could carry its issues into the new platform.
-
 ## :lucide-chart-bar: Analytics and Reporting
 
 :lucide-target: **Goal:** Track how the support team's writing time was being used and figure out where content coverage was thin — meaning which products or features needed more articles, or other attention from the Support department, such as improved agent training or ticket templates.
@@ -97,19 +20,6 @@ After the migration, I reviewed the most popular articles for display issues and
 :lucide-user-check: **My role:** Analyst — I reviewed the search term reports, assessed their usefulness, and fed findings into content planning decisions.
 
 Search term reports were part of the regular reporting cycle, but their value was limited by the query length and product overlap. I flagged this as a structural data problem and contributed to the internal discussion about adding auto-completion to the search input — a change that would help users form more specific queries and make the data more actionable. The feature was later prioritized as part of the RAG rollout planning.
-
-### :lucide-file-chart-column: Regular Reporting
-
-:lucide-triangle-alert: **Constraints:** The reporting process and Excel templates I inherited were built around a specific set of metrics that made sense at the time. As the team's priorities shifted — toward AI-assisted search and a more data-driven content strategy — the templates needed to evolve too. That meant learning the reporting layer in Oracle CX and reworking the calculation logic in the templates.
-
-:lucide-user-check: **My role:** Reporting owner — I inherited the process from the previous KM, maintained it, and rebuilt parts of it as business needs changed.
-
-I produced weekly and monthly reports for Support leadership using Oracle CX Knowledge data. Weekly reports tracked contributor productivity: authoring hours per person and the number of drafts and published articles, covering all contributors across the company — KB team members, product managers, technical writers, and other Client Success staff. Monthly reports tracked customer feedback volume by product category and by ticket status (backlog, in progress, canceled, done). I learned to build and customize reports directly in Oracle CX and set up auto-delivery of CSV exports so the process was less manual.
-
-The trends identified in feedback analysis fed into a content improvement backlog, which experienced Support agents contributed to during their dedicated writing time.
-
-!!! success "Highlight"
-    When I left the company, I wrote step-by-step guides with screenshots and recorded a video walkthrough of the full reporting process — so the team could keep running and adapting the reports without losing the context that had built up over time.
 
 ### :lucide-flask-conical: RAG Rollout Reporting
 
