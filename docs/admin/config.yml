@@ -26,6 +26,12 @@ collections:
         widget: string
         hint: "e.g. Intermedia, Betby"
 
+      - label: Company Size
+        name: company_size
+        widget: string
+        required: false
+        hint: "e.g. 50-person startup, 300-person scale-up, enterprise (5,000+)"
+
       - label: Role
         name: role
         widget: string

@@ -29,7 +29,7 @@ NAV_COMMENTED = [
 ]
 
 CONTEXT_FIELDS = [
-    ("company",       ":lucide-building-2:",  "Company"),
+    ("company_size",  ":lucide-building-2:",  "Company Size"),
     ("role",          ":lucide-briefcase:",    "Role"),
     ("period",        ":lucide-calendar:",     "Period"),
     ("team_scale",    ":lucide-users:",        "Team"),
@@ -37,9 +37,12 @@ CONTEXT_FIELDS = [
     ("library_scale", ":lucide-library-big:",  "Library Scale"),
 ]
 
-STORY_SECTIONS = [
-    ("goal",         "## :lucide-target: Goal"),
-    ("role",         "## :lucide-user-check: My Role"),
+STORY_SECTIONS_BEFORE_CONTEXT = [
+    ("goal",  "## :lucide-target: Goal"),
+    ("role",  "## :lucide-user-check: My Role"),
+]
+
+STORY_SECTIONS_AFTER_CONTEXT = [
     ("constraints",  "## :lucide-triangle-alert: Constraints"),
     ("obstacles",    "## :lucide-construction: Obstacles"),
 ]
@@ -86,8 +89,13 @@ def render_story(story_path: Path) -> str:
     # ── Image ────────────────────────────────────────────────────────────────
     image = meta.get("image", "").strip()
 
-    # ── Assemble sections ────────────────────────────────────────────────────
+    # ── Assemble sections: Goal → My Role → Context → Constraints → … ───────
     parts = []
+
+    for field, heading in STORY_SECTIONS_BEFORE_CONTEXT:
+        value = meta.get(field, "").strip()
+        if value:
+            parts.append(f"{heading}\n\n{value}")
 
     if image:
         parts.append(
@@ -103,7 +111,7 @@ def render_story(story_path: Path) -> str:
     elif context_content:
         parts.append(f"## :lucide-building-2: Context\n\n{context_content}")
 
-    for field, heading in STORY_SECTIONS:
+    for field, heading in STORY_SECTIONS_AFTER_CONTEXT:
         value = meta.get(field, "").strip()
         if value:
             parts.append(f"{heading}\n\n{value}")

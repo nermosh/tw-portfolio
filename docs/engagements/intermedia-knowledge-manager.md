@@ -1,5 +1,6 @@
 ---
 company: Intermedia
+company_size: Enterprise
 role: Knowledge Manager
 period: "2024"
 team_scale: 1 KB Manager + 2 Assistants + ~10 Contributors

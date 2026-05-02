@@ -1,5 +1,6 @@
 ---
 company: Betby
+company_size: Scale-up
 role: Technical Writer
 period: "2025"
 team_scale: Solo Technical Writer in a product management team
