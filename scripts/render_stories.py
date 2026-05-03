@@ -47,6 +47,7 @@ STORY_SECTIONS_AFTER_CONTEXT = [
     ("obstacles",    "## :lucide-construction: Obstacles"),
 ]
 
+BODY_HEADING = "## :lucide-pencil: What I Did"
 LESSONS_HEADING = "## :lucide-book-open-check: Lessons Learned"
 
 
@@ -117,7 +118,7 @@ def render_story(story_path: Path) -> str:
             parts.append(f"{heading}\n\n{value}")
 
     if body:
-        parts.append(body)
+        parts.append(f"{BODY_HEADING}\n\n{body}")
 
     lessons = meta.get("lessons", "").strip()
     if lessons:
