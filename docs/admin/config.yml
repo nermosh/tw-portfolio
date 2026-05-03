@@ -1,0 +1,145 @@
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+
+# Where uploaded images are saved (relative to repo root)
+media_folder: docs/images
+# Path inserted into frontmatter (relative to the story file in docs/stories/)
+public_folder: ../images
+
+collections:
+
+  # ── ENGAGEMENTS ──────────────────────────────────────────────────────────────
+  # One entry per company / role. Shared context that multiple stories reference.
+  - name: engagements
+    label: Engagements
+    label_singular: Engagement
+    folder: docs/engagements
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{company}}-{{role}}"
+    summary: "{{company}} — {{role}} ({{period}})"
+    fields:
+      - label: Company
+        name: company
+        widget: string
+        hint: "e.g. Intermedia, Betby"
+
+      - label: Company Size
+        name: company_size
+        widget: string
+        required: false
+        hint: "e.g. 50-person startup, 300-person scale-up, enterprise (5,000+)"
+
+      - label: Role
+        name: role
+        widget: string
+        hint: "e.g. Knowledge Manager, KB Contributor"
+
+      - label: Time Period
+        name: period
+        widget: string
+        hint: "e.g. 2020–2024"
+
+      - label: Team Scale
+        name: team_scale
+        widget: string
+        hint: "e.g. 4 writers in a support team of ~20"
+
+      - label: Platform & Toolkit
+        name: toolkit
+        widget: list
+        label_singular: Tool
+        field:
+          label: Tool
+          name: tool
+          widget: string
+
+      - label: Content Library Scale
+        name: library_scale
+        widget: string
+        required: false
+        hint: "e.g. 1,300 articles across 20 products, or 50 Confluence pages"
+
+      - label: Notes
+        name: body
+        widget: markdown
+        required: false
+        hint: "Optional background context — company product, audience, anything that helps frame the stories."
+
+  # ── PROFESSIONAL STORIES ─────────────────────────────────────────────────────
+  # One entry per project or initiative. References an Engagement for shared context.
+  - name: stories
+    label: Professional Stories
+    label_singular: Story
+    folder: docs/stories
+    create: true
+    extension: md
+    format: frontmatter
+    summary: "{{title}} · {{engagement}} · {{year}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Short name for this project or initiative"
+
+      - label: Engagement
+        name: engagement
+        widget: relation
+        collection: engagements
+        search_fields: [company, role]
+        value_field: "{{slug}}"
+        display_fields: ["{{company}} — {{role}} ({{period}})"]
+        hint: "Which role/company does this story belong to?"
+
+      - label: Year(s)
+        name: year
+        widget: string
+        hint: "e.g. 2022 or 2020–2022"
+
+      - label: Role at the Time
+        name: role
+        widget: string
+        hint: "Your specific title or function during this project"
+
+      - label: Story Image
+        name: image
+        widget: image
+        required: false
+        hint: "Square image — upload a consistent AI-generated illustration for this story"
+
+      - label: Goal
+        name: goal
+        widget: markdown
+        hint: "What were you trying to achieve?"
+
+      - label: Constraints
+        name: constraints
+        widget: markdown
+        required: false
+        hint: "Fixed limitations you couldn't change — tooling, budget, headcount, access."
+
+      - label: Obstacles
+        name: obstacles
+        widget: markdown
+        required: false
+        hint: "What made this hard — process gaps, team dynamics, communication friction."
+
+      - label: What I Did
+        name: body
+        widget: markdown
+        hint: "The full story — actions, decisions, approach."
+
+      - label: Lessons Learned
+        name: lessons
+        widget: markdown
+        hint: "What this experience gave you that you carry forward."
+
+      - label: Portfolio Section
+        name: section
+        widget: select
+        options:
+          - { label: "Knowledge Management", value: "Knowledge Management" }
+          - { label: "Style Guide", value: "Style Guide" }
+        hint: "Which section of the portfolio should this story appear under?"

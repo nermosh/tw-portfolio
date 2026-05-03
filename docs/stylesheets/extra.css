@@ -1,0 +1,32 @@
+.story-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.story-context {
+  flex: 1;
+  min-width: 0;
+}
+
+.story-image {
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .story-header {
+    flex-direction: column;
+  }
+
+  .story-image {
+    width: 100%;
+  }
+}

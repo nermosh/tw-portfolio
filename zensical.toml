@@ -1,5 +1,6 @@
 [project]
 site_name = "Anastasia Motovilova – Technical Writer Portfolio"
+hooks = ["hooks/story_formatter.py"]
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
@@ -34,11 +35,24 @@ Copyright &copy; 2026 Individual Entrepreneur Anastasiia Motovilova
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
     { "About Me" = "index.md" },
-    { "Knowledge Management" = "kb.md"},
-    #{ "Document Types" = "how-to.md"},
-    #{ "API Documents" = "api.md" },
-    { "Style Guide" = "style-guide.md" },
-    #{ "Localization" = "l10n.md"},
+    { "Knowledge Management" = [
+        "kb.md",
+        "stories-rendered/search-term-analysis.md",
+        "stories-rendered/regular-reporting.md",
+        "stories-rendered/ai-search-implementation-rag.md",
+        "stories-rendered/japan-partner-localization-workflow.md",
+        "stories-rendered/white-label-content-strategy.md",
+        "stories-rendered/regional-release-scheduling.md",
+        "stories-rendered/content-migration.md"
+    ]},
+    { "Style Guide" = [
+        "style-guide.md",
+        "stories-rendered/style-guide-betby.md",
+        "stories-rendered/style-guide-intermedia.md"
+    ]},
+    #{ "Document Types" = "how-to.md"}
+    #{ "API Documents" = "api.md" }
+    #{ "Localization" = "l10n.md"}
     #{ "Training" = "learning.md"}
 ]
 
